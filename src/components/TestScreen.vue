@@ -63,7 +63,7 @@ export default {
             keys: Object.keys(this.$store.getters.getTestByType(this.testType).characters),
             correctAnswerToDisplay: [],
             randomKeys: [],
-            levelKeyCount: [3, 5, 7, 9, 15],
+            levelKeyCount: [3, 5, 7, 9, 15, 20],
             isTestFinished: false,
             userAnswers: {},
             results: [],
@@ -94,9 +94,9 @@ export default {
                 stepCount++;
             }
             if (stepCount === 4) {
-                if (this.level < 5) {
+                if (this.level < this.levelKeyCount.length) {
                     levelCount++;
-                }else if(this.level === 5){
+                }else if(this.level === this.levelKeyCount.length){
                     this.isTestFinished = true;
                 }
                 stepCount = 1;

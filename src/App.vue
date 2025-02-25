@@ -20,4 +20,10 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+html {
+    transform: scale(1.5);
+    transform-origin: top left;
+    width: 66.67%;
+}
 </style>
